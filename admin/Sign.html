@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script> 
+    <link rel="stylesheet" href="Sign.css">
+</head>
+<body>
+  <!-- login -->
+    <div class="wrapper active" id="page-login">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" id="email_signin" placeholder="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="psw_signin" placeholder="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" name="" id="">Rememder me
+                </label>
+                <a href="#">forgot password</a>
+            </div>
+            <button type="button" value="Login" id="signin-button" class="btn-submit">Login</button>
+            <div class="register-link">
+                <p>Don't have account?
+                    <a href="#page-register" id="register-link">register now</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <!-- register -->
+    <div id="page-register" class="register-page">
+        <form action="">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" id="name" placeholder="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="nohp" placeholder="your number" required>
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email_signup" placeholder="your email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="psw_signup" placeholder="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="button" id="signup-button" value="daftar" class="btn-submit">Register</button>
+            <div class="register-link">
+                <p>Have account?
+                    <a href="#page-login" id="login-link">Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script>
+      document.getElementById('register-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('page-login').classList.remove('active');
+            document.getElementById('page-register').classList.add('active');
+        });
+
+        document.getElementById('login-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('page-register').classList.remove('active');
+            document.getElementById('page-login').classList.add('active');
+        });
+    </script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('/bg.jpeg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Tambahkan posisi relatif */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 0.5 untuk menggelapkan background */
+  z-index: -1; /* Pastikan layer ini berada di belakang konten utama */
+}
+
+.wrapper, .register-page {
+    display: none;
+}
+.active {
+    display: block;
+}
+.wrapper {
+width:420px;
+background:transparent;
+border:2px solid rgba(255, 255, 255, 0.3);
+backdrop-filter:blur(20px);
+box-shadow:0 0 10px rgba(0, 0, 0, .1);
+color:#fff;
+border-radius:10px;
+padding:30px 40px;
+}
+.wrapper h1 {
+font-size:36px;
+color:#fff;
+}
+.wrapper .input-box {
+width:100%;
+height:50px;
+margin:30px 0;
+position:relative;
+
+}
+.input-box input {
+width:100%;
+height:100%;
+background:transparent;
+border:none;
+outline:none;
+border:2px solid rgba(255, 255, 255, 0.3);
+border-radius:40px;
+font-size:16px;
+color:#fff;
+padding:20px 45px 20px 20px;
+
+
+}
+.input-box::placeholder {
+    color:#fff;
+}
+.input-box i {
+position:absolute;
+right:20px;
+top:50%;
+font-size:20px;
+transform: translateY(-50%);
+}
+.wrapper .remember-forgot {
+display:flex;
+justify-content:space-between;
+font-size:14.5px;
+margin:-15px 0 15px;
+
+}
+.remember-forgot label input {
+accent-color:#fff;
+margin-right:3px;
+}
+.remember-forgot a {
+color:#fff;
+text-decoration:none;
+}
+.remember-forgot a:hover {
+text-decoration:underline;
+}
+.wrapper .btn-submit {
+width:100%;
+height:45px;
+background:#fff;
+border:none;
+outline:none;
+border-radius:40px;
+box-shadow:0 0 10px rgba(0, 0, 0, .1);
+cursor:pointer;
+font-size:16px;
+color:#333;
+font-weight:600;
+}
+.wrapper .register-link {
+font-size:14.5px;
+text-align:center;
+margin:20px 0 15px;
+}
+.register-link p a {
+color:#fff;
+text-decoration:none;
+font-weight:600;
+}
+.register-link:hover p a {
+text-decoration:underline;
+}
+/* register */
+.register-page {
+    width:420px;
+    background:transparent;
+    border:2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 10px rgba(0, 0, 0, .1);
+    color:#fff;
+    border-radius:10px;
+    padding:30px 40px;
+    }
+    .register-page h1 {
+    font-size:36px;
+    color:#fff;
+    }
+    .register-page .input-box {
+    width:100%;
+    height:50px;
+    margin:30px 0;
+    position:relative;
+    
+    }
+    .input-box input {
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    border:2px solid rgba(255, 255, 255, 0.3);
+    border-radius:40px;
+    font-size:16px;
+    color:#fff;
+    padding:20px 45px 20px 20px;
+    
+    
+    }
+    .input-box::placeholder {
+        color:#fff;
+    }
+    .input-box i {
+    position:absolute;
+    right:20px;
+    top:50%;
+    font-size:20px;
+    transform: translateY(-50%);
+    }
+    .register-page .remember-forgot {
+    display:flex;
+    justify-content:space-between;
+    font-size:14.5px;
+    margin:-15px 0 15px;
+    
+    }
+    .remember-forgot label input {
+    accent-color:#fff;
+    margin-right:3px;
+    }
+    .remember-forgot a {
+    color:#fff;
+    text-decoration:none;
+    }
+    .remember-forgot a:hover {
+    text-decoration:underline;
+    }
+    .register-page .btn-submit {
+    width:100%;
+    height:45px;
+    background:#fff;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    box-shadow:0 0 10px rgba(0, 0, 0, .1);
+    cursor:pointer;
+    font-size:16px;
+    color:#333;
+    font-weight:600;
+    }
+    .register-page .register-link {
+    font-size:14.5px;
+    text-align:center;
+    margin:20px 0 15px;
+    }
+    .register-link p a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    }
+    .register-link:hover p a {
+    text-decoration:underline;
+    }

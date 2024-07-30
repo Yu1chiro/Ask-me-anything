@@ -1,0 +1,47 @@
+
+#loading {
+    display: none;
+    /* Styling untuk spinner/loading indicator */
+}
+#content {
+    display: none;
+}
+.Loader-container {
+    height: 100%;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #fff;
+    animation: spin 0.8s ease infinite;
+    margin-top:15rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width: 640px) {
+    table {
+        margin-top:2rem;
+    }
+}

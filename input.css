@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/*  */
+#icon {
+    border:5px solid aqua;
+    border-radius:50%;
+}
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: "⏳";
+    display: inline-block;
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+}
+section {
+    display:none;
+}
+
+textarea {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+button {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+@media screen and (max-width: 640px) {
+    .dekstop {
+        display:none;
+    }
+    section {
+        margin-top:1rem;
+        display:block;
+    }
+}
