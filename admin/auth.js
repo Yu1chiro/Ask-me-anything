@@ -40,11 +40,11 @@ const firebaseConfig = {
                   loadingElement.style.display = 'none';
                   contentElement.style.display = 'block';
               } else if (!isAdmin && isAdminPage) {
-                //   window.location.href = "https://aspirasi-mahasiswa.vercel.app/page-admin/Login.html";
-                  window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
+                  window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
+                //   window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
               } else if (isAdmin && !isAdminPage) {
-                window.location.href = "http://127.0.0.1:5500/admin/heraa.html";
-                //   window.location.href = "https://aspirasi-mahasiswa.vercel.app/page-admin/portal-admin.html";
+                // window.location.href = "http://127.0.0.1:5500/admin/heraa.html";
+                  window.location.href = "https://askyui-anything.vercel.app/admin/heraa.html";
               } else {
                   loadingElement.style.display = 'none';
                   contentElement.style.display = 'block';
@@ -52,8 +52,8 @@ const firebaseConfig = {
           });
       } else {
           if (!isLoginPage) {
-            window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
-            //   window.location.href = "https://aspirasi-mahasiswa.vercel.app/page-admin/Login.html";
+            // window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
+              window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
           } else {
               loadingElement.style.display = 'none';
               contentElement.style.display = 'block';
@@ -71,8 +71,8 @@ if (logoutButton) {
                 timer: 5000,
                 showConfirmButton: false
             }).then(() => {
-                // location.href = "https://aspirasi-mahasiswa.vercel.app/page-admin/Login.html";
-                location.href = "http://127.0.0.1:5500/admin/Sign.html";
+                location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
+                // location.href = "http://127.0.0.1:5500/admin/Sign.html";
 
             });
         }).catch(error => {

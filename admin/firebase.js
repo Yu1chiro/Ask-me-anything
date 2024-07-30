@@ -77,8 +77,8 @@ signinButton.addEventListener("click", (e) => {
             title: 'Hello Hera 👋',
           }).then(() => {
             // Redirect after the alert is closed
-            // location.href = "";
-            location.href = "http://127.0.0.1:5500/admin/heraa.html";
+            location.href = "https://askyui-anything.vercel.app/admin/heraa.html";
+            // location.href = "http://127.0.0.1:5500/admin/heraa.html";
           });
         } else {
           alert("Access Denied. Admins only.");
