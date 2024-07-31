@@ -50,7 +50,7 @@ downloadBtn.addEventListener('click', () => {
             // Fallback to open Instagram website if the app is not installed
             setTimeout(() => {
                 window.location.href = 'https://www.instagram.com/';
-            }, 1000);
+            }, 2000);
         }, 2000);
     });
 });
