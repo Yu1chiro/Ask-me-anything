@@ -25,7 +25,7 @@ const firebaseConfig = {
       return Promise.resolve(false);
   };
 
-  const isAdminPage = window.location.href.includes("Yui.html");
+  const isAdminPage = window.location.href.includes("yui.html");
   const isLoginPage = window.location.href.includes("Sign.html");
 
   const loadingElement = document.getElementById('loading');
@@ -44,7 +44,7 @@ const firebaseConfig = {
                 //   window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
               } else if (isAdmin && !isAdminPage) {
                 // window.location.href = "http://127.0.0.1:5500/admin/Yui.html";
-                  window.location.href = "https://askyui-anything.vercel.app/admin/Yui.html";
+                  window.location.href = "https://askyui-anything.vercel.app/admin/yui.html";
               } else {
                   loadingElement.style.display = 'none';
                   contentElement.style.display = 'block';

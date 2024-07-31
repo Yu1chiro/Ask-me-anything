@@ -100,7 +100,7 @@ signinButton.addEventListener("click", (e) => {
               title: 'ようこそ👋',
             }).then(() => {
             //   location.href = "http://127.0.0.1:5500/admin/Yui.html";
-              location.href = "https://askyui-anything.vercel.app/admin/Yui.html";
+              location.href = "https://askyui-anything.vercel.app/admin/yui.html";
             });
           } else {
             alert("Access Denied. Admins only.");
