@@ -35,14 +35,26 @@ const showModal = (message) => {
     modal.classList.remove('hidden');
     
     // Setup download button
-    downloadBtn.addEventListener('click', () => {
-        html2canvas(modal).then(canvas => {
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png');
-            link.download = 'modal-image.png';
-            link.click();
-        });
+downloadBtn.addEventListener('click', () => {
+    html2canvas(modal).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'secret-message.png';
+        link.click();
+        
+        // Wait for 1 second before redirecting to Instagram
+        setTimeout(() => {
+            // Attempt to open Instagram app using the URI scheme
+            window.location.href = 'instagram://user?username=';
+
+            // Fallback to open Instagram website if the app is not installed
+            setTimeout(() => {
+                window.location.href = 'https://www.instagram.com/';
+            }, 500);
+        }, 1000);
     });
+});
+
 };
 
 // Function to hide the modal
