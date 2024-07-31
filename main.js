@@ -2,14 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/fireba
 import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js"; 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDaOtiESsSL_uU8fayZWRfWhdSXghSrCE8",
-    authDomain: "portal-aspirasi.firebaseapp.com",
-    projectId: "portal-aspirasi",
-    storageBucket: "portal-aspirasi.appspot.com",
-    messagingSenderId: "302052118377",
-    appId: "1:302052118377:web:e24e63611072c43c92f7f8",
-    measurementId: "G-ZKJ9KETMSG"
-};
+    apiKey: "AIzaSyCc4JaU5heWBY4rGElHwDJIpEx_L7s7I9M",
+    authDomain: "ask-yui.firebaseapp.com",
+    projectId: "ask-yui",
+    storageBucket: "ask-yui.appspot.com",
+    messagingSenderId: "774250078141",
+    appId: "1:774250078141:web:d2fa75a1da5c4261967cd4",
+    measurementId: "G-7D3CWJPGK6"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
             Swal.fire({
                 icon: 'error',
                 title: 'Your message has been blocked',
-                text: 'Hayo lho mau nyoba XSS kan?😁 Jangan gtu lah ngab, ga asik kali kau',
                 showConfirmButton: false
             });
             return;

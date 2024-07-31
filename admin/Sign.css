@@ -27,7 +27,18 @@ body::before {
   background: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 0.5 untuk menggelapkan background */
   z-index: -1; /* Pastikan layer ini berada di belakang konten utama */
 }
-
+.bxs-user {
+    color:aqua;
+}
+.bxs-lock-alt {
+    color:aqua;
+}
+.bxs-phone {
+    color:aqua;
+}
+.bxs-envelope {
+    color:aqua;
+}
 .wrapper, .register-page {
     display: none;
 }
@@ -213,3 +224,36 @@ text-decoration:underline;
     .register-link:hover p a {
     text-decoration:underline;
     }
+    /* Button Styling */
+.btn-submit {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    overflow: hidden; /* To ensure spinner doesn't overflow */
+  }
+  
+  /* Spinner Styling */
+  .spinner {
+    border: 4px solid aqua;
+    border-radius: 50%;
+    border-left-color: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    animation: spin 1s linear infinite;
+    display: block;
+  }
+  
+  /* Spinner Animation */
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  

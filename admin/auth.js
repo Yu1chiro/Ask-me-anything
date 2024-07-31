@@ -3,13 +3,13 @@ import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from
 import { getDatabase, ref, onValue, get } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDaOtiESsSL_uU8fayZWRfWhdSXghSrCE8",
-    authDomain: "portal-aspirasi.firebaseapp.com",
-    projectId: "portal-aspirasi",
-    storageBucket: "portal-aspirasi.appspot.com",
-    messagingSenderId: "302052118377",
-    appId: "1:302052118377:web:e24e63611072c43c92f7f8",
-    measurementId: "G-ZKJ9KETMSG"
+    apiKey: "AIzaSyCc4JaU5heWBY4rGElHwDJIpEx_L7s7I9M",
+    authDomain: "ask-yui.firebaseapp.com",
+    projectId: "ask-yui",
+    storageBucket: "ask-yui.appspot.com",
+    messagingSenderId: "774250078141",
+    appId: "1:774250078141:web:d2fa75a1da5c4261967cd4",
+    measurementId: "G-7D3CWJPGK6"
   };
   // Inisialisasi Firebase
   const app = initializeApp(firebaseConfig);
@@ -25,7 +25,7 @@ const firebaseConfig = {
       return Promise.resolve(false);
   };
 
-  const isAdminPage = window.location.href.includes("heraa.html");
+  const isAdminPage = window.location.href.includes("yui.html");
   const isLoginPage = window.location.href.includes("Sign.html");
 
   const loadingElement = document.getElementById('loading');
@@ -43,8 +43,8 @@ const firebaseConfig = {
                   window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
                 //   window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
               } else if (isAdmin && !isAdminPage) {
-                // window.location.href = "http://127.0.0.1:5500/admin/heraa.html";
-                  window.location.href = "https://askyui-anything.vercel.app/admin/heraa.html";
+                // window.location.href = "http://127.0.0.1:5500/admin/yui.html";
+                  window.location.href = "https://askyui-anything.vercel.app/admin/yui.html";
               } else {
                   loadingElement.style.display = 'none';
                   contentElement.style.display = 'block';
@@ -53,7 +53,7 @@ const firebaseConfig = {
       } else {
           if (!isLoginPage) {
             // window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
-              window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
+              window.location.href = "https://askyui-anything.vercel.app/admin/yui.html";
           } else {
               loadingElement.style.display = 'none';
               contentElement.style.display = 'block';
