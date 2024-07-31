@@ -25,7 +25,7 @@ const firebaseConfig = {
       return Promise.resolve(false);
   };
 
-  const isAdminPage = window.location.href.includes("yui.html");
+  const isAdminPage = window.location.href.includes("Yui.html");
   const isLoginPage = window.location.href.includes("Sign.html");
 
   const loadingElement = document.getElementById('loading');
@@ -43,8 +43,8 @@ const firebaseConfig = {
                   window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
                 //   window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
               } else if (isAdmin && !isAdminPage) {
-                // window.location.href = "http://127.0.0.1:5500/admin/yui.html";
-                  window.location.href = "https://askyui-anything.vercel.app/admin/yui.html";
+                // window.location.href = "http://127.0.0.1:5500/admin/Yui.html";
+                  window.location.href = "https://askyui-anything.vercel.app/admin/Yui.html";
               } else {
                   loadingElement.style.display = 'none';
                   contentElement.style.display = 'block';
@@ -53,7 +53,7 @@ const firebaseConfig = {
       } else {
           if (!isLoginPage) {
             // window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
-              window.location.href = "https://askyui-anything.vercel.app/admin/yui.html";
+              window.location.href = "https://askyui-anything.vercel.app/admin/Login.html";
           } else {
               loadingElement.style.display = 'none';
               contentElement.style.display = 'block';
@@ -72,7 +72,7 @@ if (logoutButton) {
                 showConfirmButton: false
             }).then(() => {
                 location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
-                // location.href = "http://127.0.0.1:5500/admin/Sign.html";
+                // location.href = "http://127.0.0.1:5500/page-admin/admin/Sign.html";
 
             });
         }).catch(error => {

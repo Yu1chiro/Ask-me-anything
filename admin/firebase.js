@@ -97,10 +97,10 @@ signinButton.addEventListener("click", (e) => {
           if (snapshot.exists() && snapshot.val().admin === true) {
             Swal.fire({
               icon: 'success',
-              title: 'Hello Hera 👋',
+              title: 'ようこそ👋',
             }).then(() => {
-            //   location.href = "http://127.0.0.1:5500/admin/yui.html";
-              location.href = "https://askyui-anything.vercel.app/admin/yui.html";
+            //   location.href = "http://127.0.0.1:5500/admin/Yui.html";
+              location.href = "https://askyui-anything.vercel.app/admin/Yui.html";
             });
           } else {
             alert("Access Denied. Admins only.");
@@ -128,3 +128,4 @@ signinButton.addEventListener("click", (e) => {
       hideLoading(signinButton);
     });
 });
+// 

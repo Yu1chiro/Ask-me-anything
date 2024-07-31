@@ -6,12 +6,13 @@
     <title>ゆい</title>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"  rel="stylesheet" />
      <link rel="shortcut icon" href="/me.png" type="image/x-icon">
+     <link rel="stylesheet" href="/output.css">
      <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
      
 
      <link rel="stylesheet" href="admin.css">
 </head>
-<body class="bg-gray-900">
+<body class="bg-center bg-no-repeat bg-gray-700 bg-blend-multiply" style="background-image: url('/bg.jpeg');">
     <main>
         <div class="Loader-container">
             <div id="loading" class="text-center">.
@@ -24,7 +25,7 @@
             <h1 class="text-2xl font-bold mb-4 text-center text-white">内緒のメッセージ</h1>
             <div class="text-center" style="margin: 1rem 0;">
                 <button id="logout-button" class="mt-4 bg-red-500 font-bold text-white py-2 px-4 rounded">Log Out</button>
-                <button id="export-btn" class="mt-4 bg-green-500 font-bold text-white py-2 px-4 rounded">Export to Excel</button>
+                <button id="change-img" class="mt-4 bg-green-500 font-bold text-white py-2 px-4 rounded">Change img</button>
             </div>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white mx-auto shadow-md rounded-lg overflow-hidden">
@@ -47,11 +48,10 @@
         <!-- Modal -->
         <div id="detail-modal" class="fixed max-w-screen-xl inset-0 flex bg-center bg-no-repeat items-center justify-center bg-opacity-50 hidden" style="background-image: url('/bg.jpeg');">
             <div class="bg-white p-4 rounded-lg shadow-lg relative w-96" style="margin: 0 1rem; box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);">
-                <div class="flex items-center mb-4 justify-between">
-                    <h2 class="text-xl font-bold mr-2 flex items-center">Anonim Message</h2>
-                    <button id="close-modal-btn" class="text-red-500 text-md font-bold">❌</button>
-                    <button class="ml-2 text-md cursor-pointer flex items-center" id="download-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex items-center mb-4">
+                    <h2 class="text-xl font-bold mr-2">Anonim Message</h2>
+                    <span class="text-md cursor-pointer flex items-center" id="download-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <radialGradient id="instagramGradient" cx="30%" cy="107%" r="150%">
                                     <stop offset="0%" stop-color="#fdf497"/>
@@ -63,14 +63,16 @@
                             </defs>
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagramGradient)"/>
                         </svg>
-                    </button>
+                    </span>
                 </div>
                 <p id="modal-message" class="text-black font-medium text-md"></p>
+                <button id="close-modal-btn" class="absolute top-2 right-2 text-red-500 text-md font-bold">❌</button>
             </div>
         </div>
         
 
     </main>
+
     <!--  -->
     <script type="module" src="auth.js"></script>
     <script type="module" src="fetch.js"></script>

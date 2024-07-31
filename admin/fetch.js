@@ -15,7 +15,6 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 const tableBody = document.getElementById('aspirasi-table-body');
-const exportBtn = document.getElementById('export-btn');
 
 // Function to format timestamp
 const formatTimestamp = (timestamp) => {
@@ -119,37 +118,3 @@ onValue(aspirasiRef, (snapshot) => {
     }
 });
 
-// Function to extract data from Firebase and download as Excel
-const extractData = async () => {
-    const dataRef = ref(database, 'Ask-yui');
-    try {
-        const snapshot = await get(dataRef);
-        if (snapshot.exists()) {
-            const data = snapshot.val();
-            const extractedData = [];
-
-            Object.keys(data).forEach(key => {
-                const item = data[key];
-                extractedData.push({
-                    TIMESTAMP: formatTimestamp(Number(key)), // Include formatted timestamp
-                    MESSAGE: item.Message
-                });
-            });
-
-            const worksheet = XLSX.utils.json_to_sheet(extractedData);
-            const workbook = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(workbook, worksheet, "AskYui");
-
-            XLSX.writeFile(workbook, "Ask-yui.xlsx");
-            Swal.fire('Success!', 'Data berhasil diekstrak dan diunduh.', 'success');
-        } else {
-            Swal.fire('No Data', 'Tidak ada data aspirasi yang tersedia untuk diekstrak.', 'info');
-        }
-    } catch (error) {
-        console.error("Error extracting data from database", error);
-        Swal.fire('Error', 'Terjadi kesalahan saat mengekstrak data.', 'error');
-    }
-};
-
-// Add event listener to export button
-exportBtn.addEventListener('click', extractData);
