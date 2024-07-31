@@ -53,7 +53,7 @@ const firebaseConfig = {
       } else {
           if (!isLoginPage) {
             // window.location.href = "http://127.0.0.1:5500/admin/Sign.html";
-              window.location.href = "https://askyui-anything.vercel.app/admin/Login.html";
+              window.location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
           } else {
               loadingElement.style.display = 'none';
               contentElement.style.display = 'block';
