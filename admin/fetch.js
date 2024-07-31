@@ -42,11 +42,11 @@ downloadBtn.addEventListener('click', () => {
         // Wait for 1 second before redirecting to Instagram
         setTimeout(() => {
             // Attempt to open Instagram app using the URI scheme
-            window.location.href = 'instagram://user?username=';
-
+            
+            window.location.href = 'https://www.instagram.com/';
             // Fallback to open Instagram website if the app is not installed
             setTimeout(() => {
-                window.location.href = 'https://www.instagram.com/';
+                window.location.href = 'instagram://user?username=';
             }, 2000);
         }, 2000);
     });
