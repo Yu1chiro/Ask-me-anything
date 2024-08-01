@@ -9,24 +9,20 @@ const firebaseConfig = {
     messagingSenderId: "774250078141",
     appId: "1:774250078141:web:d2fa75a1da5c4261967cd4",
     measurementId: "G-7D3CWJPGK6"
-  };
+};
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// Helper function to sanitize input
 function sanitizeInput(input) {
-    // Remove potentially dangerous HTML tags and content
     let sanitized = input.replace(/<script.*?>.*?<\/script>/gi, '')
                          .replace(/<iframe.*?>.*?<\/iframe>/gi, '')
                          .replace(/<object.*?>.*?<\/object>/gi, '')
                          .replace(/<embed.*?>.*?<\/embed>/gi, '')
                          .replace(/<applet.*?>.*?<\/applet>/gi, '')
                          .replace(/<\/?(?:form|input|button|textarea|select|style)[^>]*>/gi, '')
-                         .replace(/<\/?[^>]+>/gi, ''); // Remove remaining HTML tags
+                         .replace(/<\/?[^>]+>/gi, ''); 
     
-    // Encode special characters to prevent XSS
     sanitized = sanitized.replace(/&/g, '&amp;')
                          .replace(/</g, '&lt;')
                          .replace(/>/g, '&gt;')
@@ -36,21 +32,24 @@ function sanitizeInput(input) {
     return sanitized;
 }
 
-// Handle form submission
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('form-message');
     const submitButton = document.getElementById('send-message');
+    const messageInput = document.getElementById('message');
+
+    messageInput.addEventListener('input', () => {
+        if (messageInput.value.length > 100) {
+            messageInput.value = messageInput.value.substring(0, 100);
+        }
+    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Get form values
-        let message = document.getElementById('message').value;
+        let message = messageInput.value;
 
-        // Sanitize input
         message = sanitizeInput(message);
 
-        // Validate input
         if (!message) {
             Swal.fire({
                 icon: 'error',
@@ -60,29 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Add loading animation to submit button
         submitButton.classList.add('loading');
         submitButton.disabled = true;
 
-        // Generate a unique ID based on timestamp
-        const timestamp = Date.now(); // Current timestamp in milliseconds
+        const timestamp = Date.now(); 
 
-        // Send data to Firebase
         try {
             await set(ref(database, 'Ask-yui/' + timestamp), {
                 Message: message
             });
             
-            // Stop loading animation and reset form
             submitButton.classList.remove('loading');
             submitButton.disabled = false;
             form.reset();
             
-            // Show success alert
             Swal.fire({
                 icon: 'success',
-                title: 'Thankyou!',
-                text: 'Sending Successfully!',
+                title: 'Sankyu!',
                 timer: 1000,
                 showConfirmButton: false
             });
@@ -91,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error writing to Firebase Database', error);
             alert('Gagal mengirim aspirasi. Silakan coba lagi.');
             
-            // Stop loading animation in case of error
             submitButton.classList.remove('loading');
             submitButton.disabled = false;
         }

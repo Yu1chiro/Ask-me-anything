@@ -72,7 +72,7 @@ if (logoutButton) {
                 showConfirmButton: false
             }).then(() => {
                 location.href = "https://askyui-anything.vercel.app/admin/Sign.html";
-                // location.href = "http://127.0.0.1:5500/page-admin/admin/Sign.html";
+                // location.href = "http://127.0.0.1:5500/admin/Sign.html";
 
             });
         }).catch(error => {

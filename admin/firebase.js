@@ -99,7 +99,7 @@ signinButton.addEventListener("click", (e) => {
               icon: 'success',
               title: 'ようこそ👋',
             }).then(() => {
-            //   location.href = "http://127.0.0.1:5500/admin/Yui.html";
+              // location.href = "http://127.0.0.1:5500/admin/yui.html";
               location.href = "https://askyui-anything.vercel.app/admin/yui.html";
             });
           } else {
