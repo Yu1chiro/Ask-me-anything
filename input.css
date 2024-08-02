@@ -17,9 +17,6 @@
     margin-left: 10px;
     animation: spin 1s linear infinite;
 }
-section {
-    display:none;
-}
 
 textarea {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
@@ -29,11 +26,11 @@ button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
 @media screen and (max-width: 640px) {
-    .dekstop {
-        display:none;
-    }
+   form, #form-message {
+    margin:0 1rem;
+   }
     section {
         margin-top:1rem;
-        display:block;
+        
     }
 }
