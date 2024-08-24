@@ -8,9 +8,10 @@
 .detail-btn {
     cursor: url('/pointer.png') 16 16, auto;
 }
-#download-btn {
+.instagram {
   cursor: url('/pointer.png') 16 16, auto;
 }
+
 #close-modal-btn {
 cursor: url('/pointer.png') 16 16, auto;
 }
