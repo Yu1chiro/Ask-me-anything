@@ -5,7 +5,12 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family: "Poppins", sans-serif;
+cursor: url('/cursor2.png') 16 16, auto;
 }
+#signin-button {
+    cursor: url('/pointer.png') 16 16, auto;
+}
+
 body {
   display: flex;
   justify-content: center;

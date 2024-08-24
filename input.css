@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 /*  */
+* {
+    cursor: url('/cursor2.png') 16 16, auto;
+}
+
 #icon {
     border:5px solid aqua;
     border-radius:50%;
@@ -21,9 +25,12 @@
 textarea {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
 }
-
+#send-message {
+    cursor: url('/pointer.png') 16 16, auto;
+}
 button {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+
 }
 @media screen and (max-width: 640px) {
    form, #form-message {

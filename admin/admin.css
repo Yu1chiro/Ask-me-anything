@@ -1,4 +1,10 @@
 
+* {
+    cursor: url('/cursor2.png') 16 16, auto;
+}
+#logout-button  {
+    cursor: url('/pointer.png') 16 16, auto;
+}
 #loading {
     display: none;
     /* Styling untuk spinner/loading indicator */
