@@ -5,6 +5,17 @@
 #logout-button  {
     cursor: url('/pointer.png') 16 16, auto;
 }
+.detail-btn {
+    cursor: url('/pointer.png') 16 16, auto;
+}
+.download-btn {
+  cursor: url('/pointer.png') 16 16, auto;
+
+}
+.delete-btn {
+    cursor: url('/pointer.png') 16 16, auto;
+
+}
 #loading {
     display: none;
     /* Styling untuk spinner/loading indicator */
